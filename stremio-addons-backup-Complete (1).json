@@ -1,0 +1,2382 @@
+[
+  {
+    "transportUrl": "https://aiometadata.stremio.ru/stremio/396fbc49-3ad6-49f0-9337-61f8cb653e99/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "aio-metadata",
+      "version": "1.16.0",
+      "name": "AIOMetadata | Kuu-lection",
+      "contactEmail": null,
+      "description": "A metadata addon for power users. AIOMetadata uses TMDB, TVDB, TVMaze, MyAnimeList, IMDB and Fanart.tv to provide accurate data for movies, series, and anime. You choose the source.",
+      "logo": "https://aiometadata.stremio.ru/logo.png",
+      "background": "https://aiometadata.stremio.ru/background.png",
+      "types": [
+        "movie",
+        "series",
+        "anime.movie",
+        "anime.series",
+        "anime",
+        "Trakt",
+        "collection"
+      ],
+      "resources": [
+        "catalog",
+        "meta",
+        "subtitles"
+      ],
+      "idPrefixes": [
+        "tmdb:",
+        "tt",
+        "tvdb:",
+        "mal:",
+        "tvmaze:",
+        "kitsu:",
+        "anidb:",
+        "anilist:",
+        "tvdbc:",
+        "upnext_",
+        "unwatched_"
+      ],
+      "catalogs": [
+        {
+          "id": "trakt.recommendations.movies",
+          "type": "movie",
+          "name": "Recommendations",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "action",
+                "adventure",
+                "animation",
+                "anime",
+                "comedy",
+                "crime",
+                "documentary",
+                "donghua",
+                "drama",
+                "family",
+                "fantasy",
+                "history",
+                "holiday",
+                "horror",
+                "music",
+                "musical",
+                "mystery",
+                "none",
+                "romance",
+                "science-fiction",
+                "short",
+                "sporting-event",
+                "superhero",
+                "suspense",
+                "thriller",
+                "war",
+                "western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "trakt.recommendations.shows",
+          "type": "series",
+          "name": "Recommendations",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "action",
+                "adventure",
+                "animation",
+                "anime",
+                "biography",
+                "children",
+                "comedy",
+                "crime",
+                "documentary",
+                "donghua",
+                "drama",
+                "family",
+                "fantasy",
+                "game-show",
+                "history",
+                "holiday",
+                "home-and-garden",
+                "horror",
+                "mini-series",
+                "music",
+                "musical",
+                "mystery",
+                "news",
+                "none",
+                "reality",
+                "romance",
+                "science-fiction",
+                "short",
+                "soap",
+                "special-interest",
+                "sporting-event",
+                "superhero",
+                "suspense",
+                "talk-show",
+                "thriller",
+                "war",
+                "western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "tmdb.trending",
+          "type": "series",
+          "name": "Trending",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": true,
+              "options": [
+                "Day",
+                "Week"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "tmdb.trending",
+          "type": "movie",
+          "name": "Trending",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": true,
+              "options": [
+                "Day",
+                "Week"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "tmdb.top",
+          "type": "series",
+          "name": "Popular",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": true,
+              "options": [
+                "None",
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "tmdb.top",
+          "type": "movie",
+          "name": "Popular",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": true,
+              "options": [
+                "None",
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.nfx",
+          "type": "movie",
+          "name": "Netflix",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.nfx",
+          "type": "series",
+          "name": "Netflix",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.hbm",
+          "type": "movie",
+          "name": "HBO Max",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.hbm",
+          "type": "series",
+          "name": "HBO Max",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.dnp",
+          "type": "movie",
+          "name": "Disney+",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.dnp",
+          "type": "series",
+          "name": "Disney+",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.amp",
+          "type": "movie",
+          "name": "Prime Video",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.amp",
+          "type": "series",
+          "name": "Prime Video",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.atp",
+          "type": "movie",
+          "name": "Apple TV+",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.atp",
+          "type": "series",
+          "name": "Apple TV+",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.pmp",
+          "type": "movie",
+          "name": "Paramount+",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.pmp",
+          "type": "series",
+          "name": "Paramount+ (Series)",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.pcp",
+          "type": "movie",
+          "name": "Peacock Premium",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.pcp",
+          "type": "series",
+          "name": "Peacock Premium",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.hlu",
+          "type": "movie",
+          "name": "Hulu",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.hlu",
+          "type": "series",
+          "name": "Hulu",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.vil",
+          "type": "movie",
+          "name": "Videoland",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.vil",
+          "type": "series",
+          "name": "Videoland",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.dpe",
+          "type": "movie",
+          "name": "Discovery+",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.dpe",
+          "type": "series",
+          "name": "Discovery+",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.sta",
+          "type": "movie",
+          "name": "Starz",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Music",
+                "Mystery",
+                "Romance",
+                "Science Fiction",
+                "TV Movie",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streaming.sta",
+          "type": "series",
+          "name": "Starz",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action & Adventure",
+                "Animation",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Kids",
+                "Mystery",
+                "News",
+                "Reality",
+                "Sci-Fi & Fantasy",
+                "Soap",
+                "Talk",
+                "War & Politics",
+                "Western"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "gemini.search",
+          "type": "other",
+          "name": "GEMINI AI Search",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "search",
+          "type": "movie",
+          "name": "TMDB Search",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "search",
+          "type": "series",
+          "name": "TVDB Search",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "search",
+          "type": "collection",
+          "name": "TVDB Collections",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "search",
+          "type": "anime.series",
+          "name": "KITSU Anime Search",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "search",
+          "type": "anime.movie",
+          "name": "KITSU Anime Search",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://aiostreams.stremio.ru/stremio/91fbbcdf-4980-4fb7-8659-90b4f0d217e0/eyJpIjoieDFidjMyaUFHSnpaUXRpZnZVaVVzZz09IiwiZSI6IkMwbW93WEdMNVErL01DSkpZSzhSMDd3VE4zd3lzUWdRUml2d1dPL0U1RTQ9IiwidCI6ImEifQ/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "aiostreams.stremio.ru.91fbbcdf-498",
+      "version": "2.19.0",
+      "name": "AIOStreams Stable",
+      "contactEmail": null,
+      "description": "AIOStreams consolidates multiple Stremio addons and debrid services into a single, easily configurable addon. It allows highly customisable filtering, sorting, and formatting of results and supports proxying all your streams through MediaFlow Proxy or StremThru for improved compatibility and IP restriction bypassing.",
+      "logo": "https://raw.githubusercontent.com/Viren070/AIOStreams/refs/heads/main/packages/frontend/public/logo.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series",
+        "anime",
+        "tv",
+        "events",
+        "other"
+      ],
+      "resources": [
+        {
+          "name": "stream",
+          "types": [
+            "movie",
+            "series",
+            "anime",
+            "tv",
+            "events",
+            "other"
+          ],
+          "idPrefixes": [
+            "tt",
+            "kitsu",
+            "mf",
+            "dl",
+            "kitsu:",
+            "mal:",
+            "tmdb",
+            "tmdb:"
+          ]
+        },
+        {
+          "name": "meta",
+          "types": [
+            "movie",
+            "series",
+            "tv",
+            "events"
+          ],
+          "idPrefixes": [
+            "mf",
+            "dl",
+            "aiostreamserror"
+          ]
+        },
+        {
+          "name": "subtitles",
+          "types": [
+            "movie",
+            "series"
+          ],
+          "idPrefixes": [
+            "tt"
+          ]
+        }
+      ],
+      "idPrefixes": null,
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://v3-cinemeta.strem.io/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "com.linvo.cinemeta",
+      "version": "3.0.13",
+      "name": "Cinemeta",
+      "contactEmail": null,
+      "description": "The official addon for movie and series catalogs",
+      "logo": null,
+      "background": null,
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "catalog",
+        "addon_catalog"
+      ],
+      "idPrefixes": [
+        "tt"
+      ],
+      "catalogs": [
+        {
+          "id": "last-videos",
+          "type": "series",
+          "name": "Last videos",
+          "extra": [
+            {
+              "name": "lastVideosIds",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 100
+            }
+          ]
+        },
+        {
+          "id": "calendar-videos",
+          "type": "series",
+          "name": "Calendar videos",
+          "extra": [
+            {
+              "name": "calendarVideosIds",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 100
+            }
+          ]
+        }
+      ],
+      "addonCatalogs": [
+        {
+          "id": "official",
+          "type": "all",
+          "name": "Official",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "official",
+          "type": "movie",
+          "name": "Official",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "official",
+          "type": "series",
+          "name": "Official",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "official",
+          "type": "channel",
+          "name": "Official",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "community",
+          "type": "all",
+          "name": "Community",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "community",
+          "type": "movie",
+          "name": "Community",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "community",
+          "type": "series",
+          "name": "Community",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "community",
+          "type": "channel",
+          "name": "Community",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "community",
+          "type": "tv",
+          "name": "Community",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "community",
+          "type": "Podcasts",
+          "name": "Community",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "community",
+          "type": "other",
+          "name": "Community",
+          "extraRequired": [],
+          "extraSupported": []
+        }
+      ],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": true,
+      "protected": true
+    }
+  },
+  {
+    "transportUrl": "https://watchhub.strem.io/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.stremio.watchhub",
+      "version": "1.15.0",
+      "name": "WatchHub",
+      "contactEmail": null,
+      "description": "Find where to stream your favorite movies and shows amongst Netflix, iTunes, Hulu, Amazon, HBO GO and many others. Supports many countries.",
+      "logo": "https://www.strem.io/images/watchhub-logo.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "stream"
+      ],
+      "idPrefixes": [
+        "tt"
+      ],
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": true,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://opensubtitles-v3.strem.io/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.stremio.opensubtitlesv3",
+      "version": "1.0.0",
+      "name": "OpenSubtitles v3",
+      "contactEmail": null,
+      "description": "OpenSubtitles v3 Addon for Stremio",
+      "logo": "http://www.strem.io/images/addons/opensubtitles-logo.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "subtitles"
+      ],
+      "idPrefixes": [
+        "tt"
+      ],
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": true,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://opensubtitles.strem.io/stremio/v1",
+    "transportName": "",
+    "manifest": {
+      "id": "org.stremio.opensubtitles",
+      "version": "0.24.0",
+      "name": "OpenSubtitles",
+      "contactEmail": null,
+      "description": "The official add-on for subtitles from OpenSubtitles",
+      "logo": "http://www.strem.io/images/addons/opensubtitles-logo.png",
+      "background": null,
+      "types": [
+        "series",
+        "movie",
+        "other"
+      ],
+      "resources": [
+        "subtitles"
+      ],
+      "idPrefixes": null,
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": true,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "http://127.0.0.1:11470/local-addon/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.stremio.local",
+      "version": "1.10.0",
+      "name": "Local Files (without catalog support)",
+      "contactEmail": null,
+      "description": "Local add-on to find playable files: .torrent, .mp4, .mkv and .avi",
+      "logo": null,
+      "background": null,
+      "types": [
+        "movie",
+        "series",
+        "other"
+      ],
+      "resources": [
+        {
+          "name": "meta",
+          "types": [
+            "other"
+          ],
+          "idPrefixes": [
+            "local:",
+            "bt:"
+          ]
+        },
+        {
+          "name": "stream",
+          "types": [
+            "movie",
+            "series"
+          ],
+          "idPrefixes": [
+            "tt"
+          ]
+        }
+      ],
+      "idPrefixes": null,
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": true,
+      "protected": true
+    }
+  },
+  {
+    "transportUrl": "https://nuviostreams.hayd.uk/providers=showbox,vidzee,vidsrc,vixsrc,mp4hydra,uhdmovies,moviesmod,4khdhub,topmovies/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.nuvio.streams",
+      "version": "0.5.10",
+      "name": "Nuvio Streams | Elfhosted",
+      "contactEmail": null,
+      "description": "Stremio addon for high-quality streaming links.",
+      "logo": "https://raw.githubusercontent.com/tapframe/NuvioStreaming/refs/heads/appstore/assets/titlelogo.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "stream"
+      ],
+      "idPrefixes": [
+        "tt",
+        "tmdb"
+      ],
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://7a82163c306e-stremio-netflix-catalog-addon.baby-beamup.club/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "pw.ers.netflix-catalog",
+      "version": "1.1.1",
+      "name": "Streaming Catalogs",
+      "contactEmail": null,
+      "description": "Trending movies and series on Netflix, HBO Max, Disney+, Apple TV+ and more. Configure to choose your favourite services.",
+      "logo": "https://play-lh.googleusercontent.com/TBRwjS_qfJCSj1m7zZB93FnpJM5fSpMA_wUlFDLxWAb45T9RmwBvQd5cWR5viJJOhkI",
+      "background": null,
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "catalog"
+      ],
+      "idPrefixes": [
+        "tt"
+      ],
+      "catalogs": [
+        {
+          "id": "nfx",
+          "type": "movie",
+          "name": "Netflix",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "nfx",
+          "type": "series",
+          "name": "Netflix",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "hbm",
+          "type": "movie",
+          "name": "HBO Max",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "hbm",
+          "type": "series",
+          "name": "HBO Max",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "dnp",
+          "type": "movie",
+          "name": "Disney+",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "dnp",
+          "type": "series",
+          "name": "Disney+",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "amp",
+          "type": "movie",
+          "name": "Prime  Video",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "amp",
+          "type": "series",
+          "name": "Prime Video",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "atp",
+          "type": "movie",
+          "name": "Apple TV+",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "atp",
+          "type": "series",
+          "name": "Apple TV+",
+          "extraRequired": [],
+          "extraSupported": []
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://cinemeta-catalogs.strem.io/christmaspopular/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.stremio.cinemeta-catalogs-christmaspopular",
+      "version": "1.0.0",
+      "name": "Christmas Movies",
+      "contactEmail": null,
+      "description": "Cinemeta movie / series catalogs",
+      "logo": null,
+      "background": null,
+      "types": [
+        "movie"
+      ],
+      "resources": [
+        "catalog"
+      ],
+      "idPrefixes": [
+        "tt"
+      ],
+      "catalogs": [
+        {
+          "id": "christmaspopular",
+          "type": "movie",
+          "name": "Christmas Movies",
+          "extra": [
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            },
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Action",
+                "Adventure",
+                "Animation",
+                "Biography",
+                "Comedy",
+                "Crime",
+                "Documentary",
+                "Drama",
+                "Family",
+                "Fantasy",
+                "History",
+                "Horror",
+                "Mystery",
+                "Romance",
+                "Sci-Fi",
+                "Sport",
+                "Thriller",
+                "War",
+                "Western"
+              ],
+              "optionsLimit": 1
+            }
+          ]
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://mediafusion.elfhosted.com/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "stremio.addons.mediafusion|elfhosted",
+      "version": "4.3.35",
+      "name": "MediaFusion | ElfHosted",
+      "contactEmail": null,
+      "description": "Universal Stremio Add-on for Movies, Series, Live TV &amp; Sports Events. Source: https://github.com/mhdzumair/MediaFusion",
+      "logo": "https://mediafusion.elfhosted.com/static/images/mediafusion-elfhosted-logo.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series",
+        "tv",
+        "events"
+      ],
+      "resources": [
+        "catalog",
+        {
+          "name": "stream",
+          "types": [
+            "movie",
+            "series",
+            "tv",
+            "events"
+          ],
+          "idPrefixes": [
+            "tt",
+            "mf",
+            "dl"
+          ]
+        },
+        {
+          "name": "meta",
+          "types": [
+            "movie",
+            "series",
+            "tv",
+            "events"
+          ],
+          "idPrefixes": [
+            "mf",
+            "dl"
+          ]
+        }
+      ],
+      "idPrefixes": null,
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://848b3516657c-usatv.baby-beamup.club/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "community.usatv",
+      "version": "1.5.0",
+      "name": "USA TV",
+      "contactEmail": null,
+      "description": "USA TV provides access to channels across various categories including local channels, news, sports, entertainment, premium, lifestyle, kids' shows, documentaries, Latino programming, and much more.",
+      "logo": "https://848b3516657c-usatv.baby-beamup.club/public/logo.png",
+      "background": "https://848b3516657c-usatv.baby-beamup.club/public/background.jpg",
+      "types": [
+        "tv"
+      ],
+      "resources": [
+        "catalog",
+        "stream",
+        "meta"
+      ],
+      "idPrefixes": [
+        "ustv"
+      ],
+      "catalogs": [
+        {
+          "id": "all",
+          "type": "tv",
+          "name": "USA TV",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "Local",
+                "News",
+                "Sports",
+                "Entertainment",
+                "Premium",
+                "Lifestyle",
+                "Kids",
+                "Documentaries",
+                "Music",
+                "Latino"
+              ],
+              "optionsLimit": 1
+            }
+          ]
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://stremio-addons.net/api/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "community.stremio.stremio-addons-dot-net",
+      "version": "1.0.1",
+      "name": "stremio-addons.net",
+      "contactEmail": null,
+      "description": "Provides the Community Stremio Addons catalog from stremio-addons.net.",
+      "logo": "https://stremio-addons.net/img/web-app-manifest-192x192.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series",
+        "channel",
+        "tv"
+      ],
+      "resources": [
+        "addon_catalog"
+      ],
+      "idPrefixes": null,
+      "catalogs": [],
+      "addonCatalogs": [
+        {
+          "id": "stremio-addons.net",
+          "type": "all",
+          "name": "stremio-addons.net",
+          "extraRequired": [],
+          "extraSupported": []
+        }
+      ],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://nuviostreams.hayd.uk/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.nuvio.streams",
+      "version": "0.5.10",
+      "name": "Nuvio Streams | Elfhosted",
+      "contactEmail": null,
+      "description": "Stremio addon for high-quality streaming links.",
+      "logo": "https://raw.githubusercontent.com/tapframe/NuvioStreaming/refs/heads/appstore/assets/titlelogo.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "stream"
+      ],
+      "idPrefixes": [
+        "tt",
+        "tmdb"
+      ],
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://webstreamr.hayd.uk/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "webstreamr.hayd.uk",
+      "version": "0.58.10",
+      "name": "WebStreamr | Hayduk",
+      "contactEmail": null,
+      "description": "Provides HTTP URLs from streaming websites. Configure add-on for additional languages. Add MediaFlow proxy for more URLs.\n\nSupported languages: Albanian, German, Castilian Spanish, French, Hindi, Italian, Latin American Spanish\n\nSupported sources: 4KHDHub, VixSrc, Kokoshka, CineHDPlus, Cuevana, HomeCine, VerHdLink, Einschalten, KinoGer, MegaKino, MeineCloud, StreamKiste, Frembed, FrenchCloud, Movix, Eurostreaming, MostraGuarda\n\nSupported extractors: DoodStream, Dropload, Fastream, FileLions, FileMoon, HubCloud, KinoGer, LuluStream, Mixdrop, SaveFiles, StreamEmbed, Streamtape, SuperVideo, Uqload, Vidora, VixSrc, VOE, YouTube, External",
+      "logo": "https://emojiapi.dev/api/v1/spider_web/256.png",
+      "background": null,
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "stream"
+      ],
+      "idPrefixes": [
+        "tmdb:",
+        "tt"
+      ],
+      "catalogs": [],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://addon-marvel.onrender.com/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "com.joaogonp.marveladdon",
+      "version": "1.2.0",
+      "name": "Marvel",
+      "contactEmail": null,
+      "description": "Watch the entire Marvel catalog! MCU and X-Men (chronologically organized), Movies, Series, and Animations!",
+      "logo": "https://raw.githubusercontent.com/joaogonp/addon-marvel/main/assets/icon.png",
+      "background": "https://raw.githubusercontent.com/joaogonp/addon-marvel/main/assets/background.jpg",
+      "types": [
+        "movie",
+        "series"
+      ],
+      "resources": [
+        "catalog"
+      ],
+      "idPrefixes": [
+        "marvel_"
+      ],
+      "catalogs": [
+        {
+          "id": "marvel-mcu",
+          "type": "Marvel",
+          "name": "MCU Chronologically Order",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "release-order",
+          "type": "Marvel",
+          "name": "MCU Release Order",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "xmen",
+          "type": "Marvel",
+          "name": "X-Men",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "movies",
+          "type": "Marvel",
+          "name": "Movies",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "series",
+          "type": "Marvel",
+          "name": "Series",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "animations",
+          "type": "Marvel",
+          "name": "Animations",
+          "extraRequired": [],
+          "extraSupported": []
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://streamvix.hayd.uk/%7B%22tmdbApiKey%22%3A%22%22%2C%22mediaFlowProxyUrl%22%3A%22%22%2C%22mediaFlowProxyPassword%22%3A%22%22%2C%22animeunityEnabled%22%3A%22on%22%2C%22animesaturnEnabled%22%3A%22on%22%2C%22animeworldEnabled%22%3A%22on%22%7D/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.prisonmike.streamvix",
+      "version": "9.6.23",
+      "name": "StreamViX | ElfHosted",
+      "contactEmail": null,
+      "description": "StreamViX addon con Vixsrc, Guardaserie, Altadefinizione, AnimeUnity, AnimeSaturn, AnimeWorld, Eurostreaming, TV ed Eventi Live",
+      "logo": "https://raw.githubusercontent.com/qwertyuiop8899/streamvix/refs/heads/main/public/icon.png",
+      "background": "https://raw.githubusercontent.com/qwertyuiop8899/StreamViX/refs/heads/main/public/backround.png",
+      "types": [
+        "movie",
+        "series",
+        "tv",
+        "anime"
+      ],
+      "resources": [
+        "stream",
+        "catalog",
+        "meta"
+      ],
+      "idPrefixes": [
+        "tt",
+        "kitsu",
+        "tv",
+        "mal",
+        "tmdb"
+      ],
+      "catalogs": [
+        {
+          "id": "streamvix_tv",
+          "type": "tv",
+          "name": "StreamViX TV",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "RAI",
+                "Mediaset",
+                "Sky",
+                "Sport",
+                "Cinema",
+                "Documentari",
+                "Discovery",
+                "News",
+                "Generali",
+                "Bambini",
+                "Pluto"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "search",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "streamvix_live",
+          "type": "tv",
+          "name": "StreamViX Live",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [
+                "X-Eventi",
+                "Z-Eventi",
+                "THISNOT",
+                "Serie A",
+                "Serie B",
+                "Serie C",
+                "Coppe",
+                "Soccer",
+                "Premier League",
+                "Liga",
+                "Bundesliga",
+                "Ligue 1",
+                "Tennis",
+                "F1",
+                "MotoGp",
+                "Basket",
+                "Volleyball",
+                "Ice Hockey",
+                "Wrestling",
+                "Boxing",
+                "Darts",
+                "Baseball",
+                "NFL",
+                "PPV"
+              ],
+              "optionsLimit": 1
+            },
+            {
+              "name": "search",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://stiptv.ddns.me/eyJwcm92aWRlciI6ImRpcmVjdCIsIm0zdVVybCI6Imh0dHBzOi8vaXB0di1vcmcuZ2l0aHViLmlvL2lwdHYvaW5kZXgubTN1IiwiZW5hYmxlRXBnIjpmYWxzZSwicHJlc2NhbiI6eyJlbnRyaWVzIjoxMDg2MiwiYXBwcm94VHYiOjEwNzUxLCJhcHByb3hNb3ZpZXMiOjExMSwiZXBnUHJvZ3JhbW1lcyI6MCwiZXBnQ2hhbm5lbHMiOjB9LCJpbnN0YW5jZUlkIjoiOGFmZDM0NTQtNjYyOS00YmE3LWE3ZWMtMDc3ZWY3OWUzNTBjIn0/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "org.stremio.m3u-epg-addon",
+      "version": "1.2.0",
+      "name": "M3U/EPG TV Addon",
+      "contactEmail": null,
+      "description": "IPTV addon with M3U, EPG & Xtream (JSON/M3U) + encrypted configs, LRU/Redis cache, cache toggle, EPG offset",
+      "logo": null,
+      "background": null,
+      "types": [
+        "tv",
+        "movie"
+      ],
+      "resources": [
+        "catalog",
+        "stream",
+        "meta"
+      ],
+      "idPrefixes": [
+        "iptv_"
+      ],
+      "catalogs": [
+        {
+          "id": "iptv_channels",
+          "type": "tv",
+          "name": "IPTV Channels",
+          "extra": [
+            {
+              "name": "genre",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            },
+            {
+              "name": "search",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        },
+        {
+          "id": "iptv_movies",
+          "type": "movie",
+          "name": "IPTV Movies",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            },
+            {
+              "name": "skip",
+              "isRequired": false,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": true,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  },
+  {
+    "transportUrl": "https://anime-world-stremio-addon.onrender.com/manifest.json",
+    "transportName": "",
+    "manifest": {
+      "id": "com.skoruppa.watchanimeworld-stremio-addon",
+      "version": "0.0.3",
+      "name": "Anime World India Addon",
+      "contactEmail": "skoruppa@gmail.com",
+      "description": "Watch anime in Hindi, Tamil, Telugu & English from WatchAnimeWorld.in",
+      "logo": "https://watchanimeworld.in/wp-content/uploads/AWI-SiteTitle-1.png",
+      "background": null,
+      "types": [
+        "anime",
+        "series",
+        "movie"
+      ],
+      "resources": [
+        "catalog",
+        "meta",
+        "stream"
+      ],
+      "idPrefixes": [
+        "tt"
+      ],
+      "catalogs": [
+        {
+          "id": "newest_drops",
+          "type": "anime",
+          "name": "Newest Drops",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "most_watched_shows",
+          "type": "anime",
+          "name": "Most-Watched Shows",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "new_arrivals",
+          "type": "anime",
+          "name": "New Anime Arrivals",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "most_watched_films",
+          "type": "anime",
+          "name": "Most-Watched Films",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "latest_movies",
+          "type": "anime",
+          "name": "Latest Anime Movies",
+          "extraRequired": [],
+          "extraSupported": []
+        },
+        {
+          "id": "search",
+          "type": "anime",
+          "name": "Search",
+          "extra": [
+            {
+              "name": "search",
+              "isRequired": true,
+              "options": [],
+              "optionsLimit": 1
+            }
+          ]
+        }
+      ],
+      "addonCatalogs": [],
+      "behaviorHints": {
+        "adult": false,
+        "p2p": false,
+        "configurable": false,
+        "configurationRequired": false
+      }
+    },
+    "flags": {
+      "official": false,
+      "protected": false
+    }
+  }
+]
